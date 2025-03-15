@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e575634452322594db09ff54e6bbe218, type: 3}
+  m_Name: 80 HP
+  m_EditorClassIdentifier: 
+  cardImage: {fileID: 918453563, guid: 6f0ca3ef523ca4d47978f6ddf4219b4d, type: 3}
+  cardText: +80HP
+  effectType: 1
+  effectValueInt: 80
+  effectValue: 0
+  isUnique: 0
+  unlockLevel: 0

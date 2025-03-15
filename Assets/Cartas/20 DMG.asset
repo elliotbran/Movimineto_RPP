@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e575634452322594db09ff54e6bbe218, type: 3}
+  m_Name: 20 DMG
+  m_EditorClassIdentifier: 
+  cardImage: {fileID: 16592518, guid: 13313041ce3a60f469a9595aaffdf3b1, type: 3}
+  cardText: +20 DMG
+  effectType: 0
+  effectValueInt: 20
+  effectValue: 0
+  isUnique: 0
+  unlockLevel: 0
