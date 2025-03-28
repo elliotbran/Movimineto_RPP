@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using JetBrains.Annotations;
+using System.Runtime.Serialization;
 
 public class Player_Controller : MonoBehaviour
 {
@@ -36,6 +38,7 @@ public class Player_Controller : MonoBehaviour
 
     Vector2 direccionMovimiento;
     int facingDirection = 1;
+    float horizontalMovemenent;
 
     public GunController gunController;
 
@@ -78,7 +81,7 @@ public class Player_Controller : MonoBehaviour
         {
             facingDirection = direccionMovimiento.x > 0 ? 1 : -1;
         }
-        transform.localScale = new Vector2(facingDirection, 1);
+        transform.localScale = new Vector2(facingDirection, 1);             
     }
 
     void FixedUpdate()
@@ -123,6 +126,10 @@ public class Player_Controller : MonoBehaviour
         }
     }
 
+    public void Movimineto(InputAction.CallbackContext context)
+    {       
+        horizontalMovemenent = context.ReadValue<Vector2>().x;
+    }
     public void Die()
     {
         Debug.Log("El jugador ha muerto.");
