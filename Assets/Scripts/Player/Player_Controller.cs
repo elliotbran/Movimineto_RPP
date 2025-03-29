@@ -23,6 +23,7 @@ public class Player_Controller : MonoBehaviour
     public GameObject enemym;
     public GameObject wavem;
     public GameObject muerte;
+    public Joystick movementJoystick;
 
     [Header("UI Settings")]
     public Image healthBarFill;
@@ -62,8 +63,17 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
+        // Obtén las entradas del teclado
+        float moveXKeyboard = Input.GetAxisRaw("Horizontal");
+        float moveYKeyboard = Input.GetAxisRaw("Vertical");
+
+        // Obtén las entradas del joystick
+        float moveXJoystick = movementJoystick.Horizontal;
+        float moveYJoystick = movementJoystick.Vertical;
+
+        // Combina las entradas del teclado y del joystick
+        float moveX = Mathf.Abs(moveXKeyboard) > Mathf.Abs(moveXJoystick) ? moveXKeyboard : moveXJoystick;
+        float moveY = Mathf.Abs(moveYKeyboard) > Mathf.Abs(moveYJoystick) ? moveYKeyboard : moveYJoystick;
 
         direccionMovimiento = new Vector2(moveX, moveY).normalized;
 
@@ -85,6 +95,7 @@ public class Player_Controller : MonoBehaviour
     {
         rb.velocity = new Vector2(direccionMovimiento.x * velocidad, direccionMovimiento.y * velocidad);
     }
+
 
     void Awake()
     {
