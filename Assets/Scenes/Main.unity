@@ -3063,8 +3063,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 17.400883}
-  m_SizeDelta: {x: 436, y: 297}
+  m_AnchoredPosition: {x: 0, y: 17.511015}
+  m_SizeDelta: {x: 437, y: 297}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &774287455
 MonoBehaviour:
@@ -4454,11 +4454,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0.4
   m_Points:
-  - {x: 12.423808, y: 7.26613}
-  - {x: -12.539622, y: 7.3295727}
-  - {x: -12.528116, y: -7.159648}
-  - {x: 12.480998, y: -7.2438717}
-  - {x: 12.484874, y: 7.1886797}
+  - {x: 12.423808, y: 7.7661304}
+  - {x: -12.539622, y: 7.8295727}
+  - {x: -12.578504, y: -7.083972}
+  - {x: 12.497793, y: -7.092518}
+  - {x: 12.484874, y: 7.9386797}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -8811,7 +8811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 15}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 437, y: 297}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1373256711
