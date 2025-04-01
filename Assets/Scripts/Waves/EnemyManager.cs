@@ -57,8 +57,8 @@ public class EnemyManag : MonoBehaviour
         {
             var Roll = Random.Range(0, 100);
             var spawnp = Roll < 50 ? RandomPosition() : RandomPosition2();// spawnean a la derecha o a la izquierda
-            var enemytype = Roll < 50 ? enemyprefab : enemyprefab2;// spawn de varios enemigos
-            var enemytype2 = Roll < 50 ? enemyprefab3 : enemyprefab4;
+            var enemytype = Roll < 50 ? enemyprefab : enemyprefab3;// spawn de varios enemigos
+            var enemytype2 = Roll < 50 ? enemyprefab2 : enemyprefab4;
             var reRoll = Random.Range(0, 100);
             var finalenemy = reRoll < 50 ? enemytype2 : enemytype;
             var e = Instantiate(finalenemy, spawnp, Quaternion.identity);
