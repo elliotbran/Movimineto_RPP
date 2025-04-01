@@ -10,8 +10,8 @@ public class EnemyManag : MonoBehaviour
     [SerializeField] GameObject enemyprefab4;
     [SerializeField] public float timebspawns = 3.5f; //Cada cuanto spawnean
     [SerializeField] public int enemynumer = 1; //numero de enemigos por tick
-    [SerializeField] public int minenemies = 0; //minimo de enemigos por grupo
-    [SerializeField] public int maxenemies = 3; //maximo de enemigos por grupo
+    [SerializeField] public int minenemies = 1; //minimo de enemigos por grupo
+    [SerializeField] public int maxenemies = 5; //maximo de enemigos por grupo
     float currenttimespawns;
     Transform enemyparent;
     public static EnemyManag Instance;
