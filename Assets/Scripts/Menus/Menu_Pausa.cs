@@ -34,9 +34,9 @@ public class Menu_Pausa : MonoBehaviour
     }
     public void VolveralJuego() //Boton de volver al Juego desde el menu de Pausa
     {
-        BotonPause.SetActive(true);
+        //BotonPause.SetActive(true);
         MenuPausa.SetActive(false);
-        JoystickVirtual.SetActive(true);
+        //JoystickVirtual.SetActive(true);
         Time.timeScale = 1f;
         
     }

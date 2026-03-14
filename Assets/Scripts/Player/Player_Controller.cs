@@ -23,6 +23,7 @@ public class Player_Controller : MonoBehaviour
     public GameObject enemym;
     public GameObject wavem;
     public GameObject muerte;
+    public GameObject pauseButton;
 
     [Header("UI Settings")]
     public Image healthBarFill;
@@ -43,6 +44,7 @@ public class Player_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pauseButton.SetActive(false);
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
