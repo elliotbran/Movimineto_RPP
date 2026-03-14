@@ -10,8 +10,8 @@ public class EnemyManag : MonoBehaviour
     [SerializeField] GameObject enemyprefab4;
     [SerializeField] public float timebspawns = 3.5f; //Cada cuanto spawnean
     [SerializeField] public int enemynumer = 1; //numero de enemigos por tick
-    [SerializeField] public int minenemies = 0; //minimo de enemigos por grupo
-    [SerializeField] public int maxenemies = 3; //maximo de enemigos por grupo
+    [SerializeField] public int minenemies = 1; //minimo de enemigos por grupo
+    [SerializeField] public int maxenemies = 5; //maximo de enemigos por grupo
     float currenttimespawns;
     Transform enemyparent;
     public static EnemyManag Instance;
@@ -57,8 +57,8 @@ public class EnemyManag : MonoBehaviour
         {
             var Roll = Random.Range(0, 100);
             var spawnp = Roll < 50 ? RandomPosition() : RandomPosition2();// spawnean a la derecha o a la izquierda
-            var enemytype = Roll < 50 ? enemyprefab : enemyprefab2;// spawn de varios enemigos
-            var enemytype2 = Roll < 50 ? enemyprefab3 : enemyprefab4;
+            var enemytype = Roll < 50 ? enemyprefab : enemyprefab3;// spawn de varios enemigos
+            var enemytype2 = Roll < 50 ? enemyprefab2 : enemyprefab4;
             var reRoll = Random.Range(0, 100);
             var finalenemy = reRoll < 50 ? enemytype2 : enemytype;
             var e = Instantiate(finalenemy, spawnp, Quaternion.identity);

@@ -23,11 +23,11 @@ public class Player_Controller : MonoBehaviour
     public GameObject enemym;
     public GameObject wavem;
     public GameObject muerte;
-    public Joystick movementJoystick;
 
     [Header("UI Settings")]
     public Image healthBarFill;
     public Transform healthBarCanvas;
+    public Joystick movementJoystick;
 
     [Header("Audio Settings")]
     public AudioSource audioSource;   // Componente de AudioSource
@@ -95,6 +95,7 @@ public class Player_Controller : MonoBehaviour
     {
         rb.velocity = new Vector2(direccionMovimiento.x * velocidad, direccionMovimiento.y * velocidad);
     }
+
 
 
     void Awake()

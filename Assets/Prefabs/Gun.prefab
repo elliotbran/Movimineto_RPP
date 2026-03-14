@@ -104,6 +104,8 @@ MonoBehaviour:
   projectile: {fileID: 20218192436804363, guid: a5b03ade457b3f44597ae6515ca47c69, type: 3}
   firedistance: 10
   fireRate: 0.5
+  audioSource: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!95 &2552497128928124809
 Animator:
   serializedVersion: 5
@@ -234,9 +236,9 @@ Transform:
   m_GameObject: {fileID: 4936044640911774090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8880174, y: 0.45855552, z: 0.03975297}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8878308948897444425}
   m_Father: {fileID: 0}

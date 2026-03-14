@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class Menu_Pausa : MonoBehaviour
 {
     public GameObject MenuPausa;
-    public GameObject ControlesBasicos;
+    public GameObject JoystickVirtual;
+    public GameObject BotonPause;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +19,24 @@ public class Menu_Pausa : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape)) //El boton Escape (ESC) habre el menu de pausa
         {
-           MenuPausa.SetActive(true);
+            BotonPause.SetActive(false);
+            MenuPausa.SetActive(true);
+            JoystickVirtual.SetActive(false);
             Time.timeScale = 0f; 
         }
     }
+    public void Pause() //Boton de Pausa
+    {
+        BotonPause.SetActive(false);
+        MenuPausa.SetActive(true);
+        JoystickVirtual.SetActive(false);
+        Time.timeScale = 0f;
+    }
     public void VolveralJuego() //Boton de volver al Juego desde el menu de Pausa
     {
+        BotonPause.SetActive(true);
         MenuPausa.SetActive(false);
+        JoystickVirtual.SetActive(true);
         Time.timeScale = 1f;
         
     }
@@ -33,16 +45,10 @@ public class Menu_Pausa : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         print("Funciona el reinicio");
     }
-    public void controlesbasicos() //Boton de los Controles Basicos del menu de Pausa
-    {
-        MenuPausa.SetActive(false);
-        ControlesBasicos.SetActive(true);
-        Time.timeScale = 0f;
-    }
+
     public void Atras() //Boton de volver atras en el menu pause
     {
         MenuPausa.SetActive(true);
-        ControlesBasicos.SetActive(false);
         Time.timeScale = 0f;
     }
 
